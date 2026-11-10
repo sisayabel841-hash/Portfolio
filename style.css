@@ -1,0 +1,416 @@
+/* ─── MODERN CSS DESIGN SYSTEM ─── */
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent: #0f172a;
+    --border: #e2e8f0;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --transition: all 0.2s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+li {
+    list-style: none;
+}
+
+/* ─── STYLED NAVIGATION HEADER ─── */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 10%;
+}
+
+header .logo {
+    font-size: 1.25rem;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* ─── CONTAINER ─── */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0 4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+/* ─── HERO SECTION ─── */
+#home {
+    padding: 8rem 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+#home .highlight {
+    color: var(--primary);
+}
+
+#home p:nth-of-type(1) {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#home p:nth-of-type(2) {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgb(37 99 235 / 0.25);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* ─── ABOUT ME SECTION ─── */
+#about p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 1.25rem;
+    max-width: 850px;
+}
+
+/* ─── QUALIFICATIONS & SKILLS GRID ─── */
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-block, .certification-block {
+    background: var(--bg-card);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.education-block h3, .certification-block h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.education-block p, .certification-block p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* SKILLS BADGES */
+.skills-block {
+    background: var(--accent);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    height: fit-content;
+}
+
+.skills-block h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-block ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.skills-block li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-left: 3px solid var(--primary);
+}
+
+/* ─── PROJECTS SECTION ─── */
+.projects-intro {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgb(0 0 0 / 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card p:not(.tech-badge) {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.project-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ─── CONTACT FORM SECTION ─── */
+#contact {
+    max-width: 650px;
+    margin: 0 auto;
+    border-bottom: none;
+    padding-bottom: 6rem;
+}
+
+#contact p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-main);
+    background-color: var(--bg-primary);
+    transition: var(--transition);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--bg-card);
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgb(37 99 235 / 0.15);
+    margin-top: 0.5rem;
+}
+
+form button:hover {
+    background: var(--primary-hover);
+}
+
+/* ─── FOOTER SECTION ─── */
+footer {
+    background: var(--accent);
+    color: #94a3b8;
+    text-align: center;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    header { padding: 1.25rem 5%; }
+    nav ul { gap: 1rem; }
+    #home h1 { font-size: 2.5rem; }
+    .qualifications-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── RESUME DOWNLOAD NAVIGATION BUTTON ─── */
+nav ul {
+    align-items: center; /* Ensures the button aligns perfectly centered with the text links */
+}
+
+.resume-btn {
+    background-color: var(--primary);
+    color: white !important; /* Forces text to stay white */
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgb(37 99 235 / 0.15);
+    transition: var(--transition);
+}
+
+.resume-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgb(37 99 235 / 0.25);
+}
+
